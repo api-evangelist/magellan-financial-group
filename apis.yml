@@ -1,23 +1,102 @@
 aid: magellan-financial-group
+
 name: Magellan Financial Group
-description: 'Magellan Financial Group is a company surfaced via the API Evangelist harvest backlog (source:
-  australia-apidays-2026) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://magellanfinancialgroup.com/sites/magellanfg/cache/file/BDF16750-79F8-421B-850B9E3E6AE6F263_ogimage.jpg
+
+description: 'Magellan Financial Group Ltd ("MFG", ASX: MFG) is an Australian financial services group operating across Financial
+  Markets, Corporate Finance and Investment Management, with over 550 people and more than $40 billion in assets under management.
+  Its investment management business trades as Magellan Investment Partners (global equities, global listed infrastructure,
+  Australian equities via Airlie, systematic equities via Vinva, and Barrenjoey Private Capital), and it merged with Barrenjoey
+  Capital Partners on 1 July 2026. The board proposed renaming the company Barrenjoey Group Limited (ticker BJY), subject
+  to a shareholder vote at the 22 October 2026 AGM. No public developer API is published.'
+
 url: https://raw.githubusercontent.com/api-evangelist/magellan-financial-group/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:australia-apidays-2026
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
-modified: '2026-10-21'
+
+modified: '2026-10-22'
+
 tags:
 - Company
-apis: []
+- Financial Services
+- Investment Management
+- Asset Management
+- Funds Management
+- Corporate Finance
+- Australia
+- ASX Listed
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/magellan-financial-group-hosts.yml
+- type: DomainSecurity
+  url: security/magellan-financial-group-domain-security.yml
 - type: Website
-  url: https://magellangroup.com.au/
+  url: https://magellanfinancialgroup.com/
+- type: AboutUs
+  url: https://magellanfinancialgroup.com/about/
+- type: InvestorRelations
+  url: https://magellanfinancialgroup.com/shareholder-centre/
+- type: Support
+  url: https://magellanfinancialgroup.com/contact/
+- type: TermsOfService
+  url: https://magellanfinancialgroup.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://magellanfinancialgroup.com/privacy/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/magellan-financial-group/
+- type: Website
+  name: Magellan Investment Partners
+  url: https://magellaninvestmentpartners.com/
+
+apis: []
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: Prior Website https://magellangroup.com.au/ redirects cross-domain to magellaninvestmentpartners.com (the group
+    investment brand), whose header links "Magellan Financial Group" to magellanfinancialgroup.com; that page titles itself
+    Magellan Financial Group and names Magellan Financial Group Ltd. Plain curl gets a SafeLine WAF 403; fetch-url.py plain
+    strategy returned 200. No image found (WAF blocked raw HTML). No developer portal, docs or API pointers published.
+  evidence:
+  - url: https://magellangroup.com.au/
+    status: 200
+    note: redirects to https://magellaninvestmentpartners.com/
+  - url: https://magellaninvestmentpartners.com/
+    status: 200
+  - url: https://magellanfinancialgroup.com/
+    status: 200
+  - url: https://magellanfinancialgroup.com/about/
+    status: 200
+  - url: https://magellanfinancialgroup.com/shareholder-centre/
+    status: 200
+  - url: https://magellanfinancialgroup.com/contact/
+    status: 200
+  - url: https://magellanfinancialgroup.com/terms-of-use/
+    status: 200
+  - url: https://magellanfinancialgroup.com/privacy/
+    status: 200
+  - url: https://www.linkedin.com/company/magellan-financial-group/
+    status: 200
+x-enrichment:
+  date: '2026-10-22'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=anthropic,regulatory=anthropic

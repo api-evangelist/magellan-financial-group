@@ -1,0 +1,50 @@
+generated: '2026-10-22'
+method: searched
+source: https://magellanfinancialgroup.com/privacy/
+note: >-
+  Read from the provider's own Privacy page and Terms of use (both HTTP 200, 2026-10-22). Both pages,
+  though served from magellanfinancialgroup.com, name the operating entity as "Barrenjoey" throughout.
+  Only two signals are addressed: an access/correction request route and an eligible-data-breach
+  notification commitment. The Terms of use say nothing on regulatory signals. Neither page mentions
+  subprocessor lists, data residency, retention periods, AI, accessibility or the other catalog signals,
+  so nothing is recorded for them.
+signals:
+  data_subject_request:
+    url: https://magellanfinancialgroup.com/privacy/
+    section: Accessing and correcting personal information
+    rights_named: [access, correction]
+    escalation: Office of the Australian Information Commissioner (www.oaic.gov.au) for unresolved complaints
+    evidence:
+    - source: https://magellanfinancialgroup.com/privacy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: 'If you require access to, or wish to update your personal information, please contact our Privacy Officer:'
+    - source: https://magellanfinancialgroup.com/privacy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: 'If we do not agree that the personal information is inaccurate, incomplete or out-of-date, we will notify you in writing of our reasons to refuse any corrections.'
+    - source: https://magellanfinancialgroup.com/privacy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: 'If we do not resolve a complaint to your satisfaction, you may refer the matter to the Office of the Australian Information Commissioner (see  www.oaic.gov.au ).'
+    note: >-
+      Access and correction rights under the Australian Privacy Act, requested through a Privacy Officer.
+      A refused correction gets written reasons, and complaints can be escalated to the OAIC. No deletion or
+      portability right is named, and no response deadline is stated.
+  incident_notification:
+    url: https://magellanfinancialgroup.com/privacy/
+    section: Eligible data breach
+    evidence:
+    - source: https://magellanfinancialgroup.com/privacy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: 'Our service providers are required to notify us of any unauthorised access, disclosure or loss of personal information.'
+    - source: https://magellanfinancialgroup.com/privacy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: 'If Barrenjoey determines there has been an ‘eligible data breach’ then the individuals affected will be notified as soon as practicable of the details of the breach and the recommended steps to take in response to it.'
+    note: >-
+      Commits to notify affected individuals "as soon as practicable" after an eligible data breach (the
+      Australian Notifiable Data Breaches scheme's term), and requires service providers to report incidents
+      upstream. No fixed time window is given, and nothing is said about notifying customers or regulators
+      contractually.

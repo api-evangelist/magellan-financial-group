@@ -1,0 +1,11 @@
+generated: '2026-10-22'
+method: none
+name: Magellan Financial Group packages
+note: No first-party SDK, client library or CLI found. registry.npmjs.org and pypi.org returned 404 for magellan-financial-group and magellan-investment-partners; GitHub org magellanfinancialgroup returned 404; a web search surfaced only third-party market-data vendors (EODHD, Twelve Data) covering the MFG ticker. The company publishes no developer API.
+checked:
+- https://registry.npmjs.org/magellan-financial-group (404)
+- https://pypi.org/pypi/magellan-financial-group/json (404)
+- https://registry.npmjs.org/magellan-investment-partners (404)
+- https://pypi.org/pypi/magellan-investment-partners/json (404)
+- https://api.github.com/orgs/magellanfinancialgroup (404)
+packages: []

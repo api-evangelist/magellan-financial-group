@@ -1,0 +1,19 @@
+name: Magellan Financial Group MCP server
+generated: '2026-10-22'
+method: none
+status: none
+deployment:
+  mode: none
+  auth: unknown
+  verified: searched
+search_result:
+  official_hosted_server: none
+  official_local_package: none
+  finding: Magellan Financial Group publishes no MCP server, no OpenAPI contract and no developer API, so there is
+    nothing to derive a candidate tool list from. Pre-flight contract discovery (2026-10-22) found no MCP endpoint
+    on magellanfinancialgroup.com, magellaninvestmentpartners.com or their api. hosts.
+  searches:
+  - query: '"Magellan Financial Group" OR "Magellan Investment Partners" MCP server OR API developer'
+    result: No first-party server found. The only Magellan MCP listing found (mcp.magellanpayments.com) belongs to
+      Magellan Payments, a different company, and is not recorded as this provider's surface.
+tools: []
